@@ -1,0 +1,43 @@
+A ideia aqui é reproduzir um inimigo que se comporte como o Swarm of Flies do Pixel Dungeon:
+- um único inimigo persegue o player e o ataca
+- ao tomar dano, esse inimigo se duplica
+- a versão duplicada spawna com o mesmo hp do inimigo original, ou seja:
+    a cada duplicação o spawn novo tem menos saúde
+- eles se juntam para atacar o player todos de uma só vez
+- todos eles exibem uma barra de saúde sobre a cabeça
+
+Na prática, preciso programar:
+
+-> Um player com sistema simples de movimentação e ataque
+-> Movimentação e replicação do swarm of flies
+-> Barra de vida do swarm of flies
+-> Colisão entre o player e o mob
+
+(não faço a menor ideia de como vou fazer isso mas vamos lá)
+
+
+Algoritmo do inimigo:
+- perceba o player
+- se movimente em direção a ele
+- ataque o player 
+- se o player atacar, se replique a cada colisão 
+- a sua réplica tem a mesma saúde do inimigo original, seja lá quanto for isso (salvar o hp do inimigo em
+uma variável e aplicar esse valor ao hp do inimigo novo, senão ele vai spawnar com saúde cheia)
+- a réplica também ataca o player e também se replica quando toma dano
+
+
+
+Algoritmo do player:
+- movimentação
+- ataque (colisão do player ou projeto/partícula gerado pelo player com o inimigo)
+- dano: ele toma dano quando é acertado por um ataque do mob (colocar gamefeel com shader)
+
+
+
+
+
+
+
+
+
+
